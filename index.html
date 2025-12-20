@@ -3,35 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTF Official Marketplace</title>
+    <title>CTF Official Marketplace - Premium Gold</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://sdk.minepi.com/pi-sdk.js"></script>
 </head>
 <body>
+
     <header>
-        <h1>CTF Official Store</h1>
-        <div id="user-profile">Menghubungkan ke Pi Network...</div>
-        <button id="btn-login" onclick="login()" style="display:none; margin-top:10px;">Klik untuk Login Manual</button>
+        <div class="header-container">
+            <h1 class="logo">CTF <span>OFFICIAL</span></h1>
+            <div class="auth-box">
+                <div id="user-profile">Menghubungkan ke Pi Network...</div>
+                <button id="btn-login" onclick="login()" style="display:none;" class="gold-button">
+                    Klik untuk Login Manual
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main id="product-list">
-        <div class="product-card">
-            <img src="https://via.placeholder.com/150" alt="Produk">
-            <h3>Produk Tes 1</h3>
-            <p>Harga: 1 Pi (Testnet)</p>
-            <button class="btn-buy" onclick="buyProduct('prod_001', 1.0)">Beli Sekarang</button>
+    <section class="hero">
+        <h2>Exclusive Marketplace</h2>
+        <p>Gunakan Pi Testnet Anda untuk mendapatkan aset mewah dan produk UMKM terbaik.</p>
+    </section>
+
+    <main class="container">
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="badge">Luxury Car</div>
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80" alt="Supercar">
+                <div class="product-info">
+                    <h3>Supercar Porsche 911</h3>
+                    <p class="detail">Unit Luxury, Kecepatan Tinggi, Interior Kulit Premium.</p>
+                    <p class="price">50.000 π</p>
+                    <button class="buy-button" onclick="buyProduct('Porsche-911', 50000)">Belanja Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">Property</div>
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" alt="Villa">
+                <div class="product-info">
+                    <h3>Villa Modern Jakarta</h3>
+                    <p class="detail">LT 500m2, Smart Home System, Kolam Renang.</p>
+                    <p class="price">150.000 π</p>
+                    <button class="buy-button" onclick="buyProduct('Villa-Modern', 150000)">Belanja Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">Gadget</div>
+                <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=500&q=80" alt="iPhone 15">
+                <div class="product-info">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p class="detail">Internal 512GB, Titanium Blue, Kamera 48MP.</p>
+                    <p class="price">1.200 π</p>
+                    <button class="buy-button" onclick="buyProduct('iPhone-15-Pro', 1200)">Belanja Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">Motorcycle</div>
+                <img src="https://images.unsplash.com/photo-1558981403-c5f91cbba527?auto=format&fit=crop&w=500&q=80" alt="Harley">
+                <div class="product-info">
+                    <h3>Harley Davidson Fat Boy</h3>
+                    <p class="detail">Mesin V-Twin, Warna Chrome, Kondisi Baru.</p>
+                    <p class="price">15.000 π</p>
+                    <button class="buy-button" onclick="buyProduct('Harley-Fatboy', 15000)">Belanja Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">UMKM</div>
+                <img src="https://ctfofficial.com/wp-content/uploads/2025/11/beras10.jpg" alt="Beras">
+                <div class="product-info">
+                    <h3>Beras CTF Premium</h3>
+                    <p class="detail">Beras Pulen 10KG, Kualitas Organik, Tanpa Pengawet.</p>
+                    <p class="price">1 π</p>
+                    <button class="buy-button" onclick="buyProduct('Beras-CTF', 1.0)">Belanja Sekarang</button>
+                </div>
+            </div>
+
         </div>
     </main>
 
     <div id="status-log"></div>
 
+    <footer>
+        <p>&copy; 2025 CTF Official Store. All Rights Reserved.</p>
+    </footer>
+
     <script src="app.js"></script>
+
     <script>
-        // Menampilkan tombol login manual jika dalam 5 detik nama belum muncul
+        // Logika pengecekan SDK dari file index lama Anda tetap dipertahankan
         setTimeout(() => {
-            if (document.getElementById('user-profile').innerText.includes("Menghubungkan")) {
-                document.getElementById('btn-login').style.display = "block";
-                document.getElementById('user-profile').innerText = "Koneksi lambat, silakan klik tombol di bawah:";
+            const profile = document.getElementById('user-profile');
+            if (profile.innerText.includes("Menghubungkan")) {
+                document.getElementById('btn-login').style.display = "inline-block";
+                profile.innerText = "Koneksi lambat, coba login manual:";
+                profile.style.color = "#ff4d4d";
             }
         }, 5000);
     </script>
