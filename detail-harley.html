@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Harley Davidson - CTF Official</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+    <style>
+        .detail-container { padding: 20px; max-width: 600px; margin: 0 auto; }
+        .back-link { display: inline-block; margin-bottom: 15px; color: #d4af37; text-decoration: none; font-size: 14px; font-weight: bold; }
+        .detail-image { width: 100%; border-radius: 12px; border: 1px solid #d4af37; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+    
+        .purchase-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(145deg, #181818, #111);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #d4af37;
+        }
+        .price-tag { font-size: 22px; color: #fff; font-weight: bold; }
+        
+        .btn-buy-now {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-buy-now:hover { background: #fff; transform: scale(1.05); }
+
+        .description { color: #ccc; font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
+        
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; background: #111; border-radius: 8px; overflow: hidden; }
+        .spec-table td { padding: 12px; border-bottom: 1px solid #2a2a2a; }
+        .spec-label { color: #d4af37; width: 40%; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="logo">CTF <span>OFFICIAL</span></h1>
+            <a href="index.html" class="back-link">← Kembali</a>
+        </div>
+    </header>
+
+    <div class="detail-container">
+        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80" alt="Harley Davidson" class="detail-image">
+        
+        <h2 style="color: #d4af37; margin: 20px 0 5px 0; font-size: 24px;">Harley Davidson Iron 883</h2>
+        
+        <div class="purchase-box">
+            <div class="price-tag">0.00025 π</div>
+            <button class="btn-buy-now" onclick="buyProduct('Harley-Davidson-883', 0.00025)">
+                Beli Sekarang
+            </button>
+        </div>
+
+        <p class="description">
+            Harley Davidson Iron 883 adalah legenda jalanan dengan gaya kustom minimalis. Mesin Evolution® 883cc yang dipasang di karet menghasilkan tenaga yang halus dan torsi yang melimpah untuk pengalaman berkendara yang tak tertandingi.
+        </p>
+
+        <h3 style="color: #d4af37; border-bottom: 1px solid #d4af37; padding-bottom: 8px; font-size: 18px;">Spesifikasi Mesin</h3>
+        <table class="spec-table">
+            <tr><td class="spec-label">Tipe Mesin</td><td>Air-cooled, Evolution®</td></tr>
+            <tr><td class="spec-label">Kapasitas</td><td>883 cc</td></tr>
+            <tr><td class="spec-label">Torsi Mesin</td><td>68 Nm @ 4750 rpm</td></tr>
+            <tr><td class="spec-label">Sistem Bahan Bakar</td><td>Electronic Sequential Port Fuel Injection (ESPFI)</td></tr>
+            <tr><td class="spec-label">Kapasitas Tangki</td><td>12.5 Liter</td></tr>
+            <tr><td class="spec-label">Warna</td><td>Black Denim / Vivid Black</td></tr>
+        </table>
+
+        <div style="margin-top: 40px; text-align: center; color: #555; font-size: 12px;">
+            <p>Transaksi ini divalidasi oleh Pi Network Testnet</p>
+        </div>
+        <div style="height: 40px;"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
