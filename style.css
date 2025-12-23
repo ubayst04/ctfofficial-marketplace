@@ -11,7 +11,7 @@ header {
     border-bottom: 2px solid #d4af37;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ditingkatkan agar di atas elemen lain */
+    z-index: 1000;
 }
 
 .header-container {
@@ -23,7 +23,6 @@ header {
 .logo { color: #d4af37; font-size: 26px; margin: 0; }
 .logo span { color: #fff; }
 
-/* --- Navigasi Desktop --- */
 .nav-menu ul {
     list-style: none;
     display: flex;
@@ -42,7 +41,6 @@ header {
 
 .nav-menu a:hover { color: #d4af37; }
 
-/* --- Submenu (Dropdown) --- */
 .dropdown { position: relative; }
 .dropbtn { cursor: pointer; }
 
@@ -85,7 +83,6 @@ header {
     color: #000;
 }
 
-/* --- Hamburger Menu (Mobile) --- */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -102,14 +99,25 @@ header {
     border-radius: 2px;
 }
 
-/* --- Sisanya adalah Style Product & Hero Anda --- */
 .hero {
     text-align: center;
-    padding: 50px 10%;
+    padding: 15px 10% 30px 10%;
     background: radial-gradient(circle, #222, #0b0b0b);
 }
-.hero h2 { color: #d4af37; font-size: 32px; }
-.container { padding: 20px 5%; }
+
+.hero h2 { 
+    color: #d4af37; 
+    font-size: 32px; 
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
 
 .product-grid {
     display: grid;
@@ -171,10 +179,9 @@ header {
 
 #status-log { text-align: center; color: #888; font-size: 12px; margin: 20px; }
 
-/* --- Responsive Mobile --- */
 @media (max-width: 992px) {
     .nav-menu {
-        display: none; /* Sembunyikan default */
+        display: none;
         position: fixed;
         top: 70px;
         right: 0;
