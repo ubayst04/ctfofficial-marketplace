@@ -15,19 +15,21 @@
         
         <nav class="nav-menu" id="navMenu">
             <ul>
-                <li><a href="https://ctfofficial.com">Home</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Kategori ▾</a>
-                    <div class="dropdown-content">
-                        <a href="#">Property</a>
-                        <a href="#">Luxury Cars</a>
-                        <a href="#">Gadget</a>
-                        <a href="#">UMKM</a>
-                    </div>
-                </li>
-                <li><a href="#">Tentang Kami</a></li>
-            </ul>
-        </nav>
+                <nav class="nav-menu" id="navMenu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Kategori ▾</a>
+            <div class="dropdown-content">
+                <a href="#luxury-car" onclick="toggleMenu()">Luxury Cars</a>
+                <a href="#property" onclick="toggleMenu()">Property</a>
+                <a href="#gadget" onclick="toggleMenu()">Gadget</a>
+                <a href="#umkm" onclick="toggleMenu()">UMKM</a>
+            </div>
+        </li>
+        <li><a href="https://ctfofficial.com">Tentang Kami</a></li>
+    </ul>
+</nav>
 
         <div class="auth-box">
             <div id="user-profile">Menghubungkan...</div>
@@ -48,65 +50,65 @@
     </section>
 
     <main class="container">
-        <div class="product-grid">
-            
-            <div class="product-card">
-                <div class="badge">Luxury Car</div>
-                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80" alt="Supercar">
-                <div class="product-info">
-                    <h3>Supercar Porsche 911</h3>
-                    <p class="detail">Unit Luxury, Kecepatan Tinggi, Interior Kulit Premium.</p>
-                    <p class="price">0.0003 π</p>
-                    <button class="buy-button" onclick="buyProduct('Porsche-911', 0.0003)">Belanja Sekarang</button>
-                </div>
+    <div class="product-grid">
+        
+        <div class="product-card" id="luxury-car">
+            <div class="badge">Luxury Car</div>
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80" alt="Supercar">
+            <div class="product-info">
+                <h3>Supercar Porsche 911</h3>
+                <p class="detail">Unit Luxury, Kecepatan Tinggi, Interior Kulit Premium.</p>
+                <p class="price">0.0003 π</p>
+                <button class="buy-button" onclick="buyProduct('Porsche-911', 0.0003)">Belanja Sekarang</button>
             </div>
-
-            <div class="product-card">
-                <div class="badge">Property</div>
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" alt="Villa">
-                <div class="product-info">
-                    <h3>Villa Modern Jakarta</h3>
-                    <p class="detail">LT 500m2, Smart Home System, Kolam Renang.</p>
-                    <p class="price">0.0005 π</p>
-                    <button class="buy-button" onclick="buyProduct('Villa-Modern', 0.0005)">Belanja Sekarang</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="badge">Gadget</div>
-                <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=500&q=80" alt="iPhone 15">
-                <div class="product-info">
-                    <h3>iPhone 15 Pro Max</h3>
-                    <p class="detail">Internal 512GB, Titanium Blue, Kamera 48MP.</p>
-                    <p class="price">0.0002 π</p>
-                    <button class="buy-button" onclick="buyProduct('iPhone-15-Pro', 0.0002)">Belanja Sekarang</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="badge">Motorcycle</div>
-                <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&w=800&q=80" alt="Harley">
-                <div class="product-info">
-                    <h3>Harley Davidson Fat Boy</h3>
-                    <p class="detail">Mesin V-Twin, Warna Chrome, Kondisi Baru.</p>
-                    <p class="price">0.0003 π</p>
-                    <button class="buy-button" onclick="buyProduct('Harley-Fatboy', 0.0003)">Belanja Sekarang</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="badge">UMKM</div>
-                <img src="https://ctfofficial.com/wp-content/uploads/2025/11/beras10.jpg" alt="Beras">
-                <div class="product-info">
-                    <h3>Beras CTF Premium</h3>
-                    <p class="detail">Beras Pulen 10KG, Kualitas Organik, Tanpa Pengawet.</p>
-                    <p class="price">0.00001 π</p>
-                    <button class="buy-button" onclick="buyProduct('Beras-CTF', 0.00001)">Belanja Sekarang</button>
-                </div>
-            </div>
-
         </div>
-    </main>
+
+        <div class="product-card" id="property">
+            <div class="badge">Property</div>
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" alt="Villa">
+            <div class="product-info">
+                <h3>Villa Modern Jakarta</h3>
+                <p class="detail">LT 500m2, Smart Home System, Kolam Renang.</p>
+                <p class="price">0.0005 π</p>
+                <button class="buy-button" onclick="buyProduct('Villa-Modern', 0.0005)">Belanja Sekarang</button>
+            </div>
+        </div>
+
+        <div class="product-card" id="gadget">
+            <div class="badge">Gadget</div>
+            <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=500&q=80" alt="iPhone 15">
+            <div class="product-info">
+                <h3>iPhone 15 Pro Max</h3>
+                <p class="detail">Internal 512GB, Titanium Blue, Kamera 48MP.</p>
+                <p class="price">0.0002 π</p>
+                <button class="buy-button" onclick="buyProduct('iPhone-15-Pro', 0.0002)">Belanja Sekarang</button>
+            </div>
+        </div>
+
+        <div class="product-card" id="motorcycle">
+            <div class="badge">Motorcycle</div>
+            <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&w=800&q=80" alt="Harley">
+            <div class="product-info">
+                <h3>Harley Davidson Fat Boy</h3>
+                <p class="detail">Mesin V-Twin, Warna Chrome, Kondisi Baru.</p>
+                <p class="price">0.0003 π</p>
+                <button class="buy-button" onclick="buyProduct('Harley-Fatboy', 0.0003)">Belanja Sekarang</button>
+            </div>
+        </div>
+
+        <div class="product-card" id="umkm">
+            <div class="badge">UMKM</div>
+            <img src="https://ctfofficial.com/wp-content/uploads/2025/11/beras10.jpg" alt="Beras">
+            <div class="product-info">
+                <h3>Beras CTF Premium</h3>
+                <p class="detail">Beras Pulen 10KG, Kualitas Organik, Tanpa Pengawet.</p>
+                <p class="price">0.00001 π</p>
+                <button class="buy-button" onclick="buyProduct('Beras-CTF', 0.00001)">Belanja Sekarang</button>
+            </div>
+        </div>
+
+    </div>
+</main>
 
     <div id="status-log" style="text-align: center; color: #888; margin-bottom: 20px;"></div>
 

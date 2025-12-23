@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.product-card {
+    scroll-margin-top: 100px; 
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #0b0b0b;
@@ -68,7 +76,6 @@ header {
 .dropdown-content a:hover { background-color: #d4af37; color: #000; }
 .dropdown:hover .dropdown-content { display: block; }
 
-/* --- Auth Box & Buttons --- */
 .auth-box { display: flex; align-items: center; gap: 15px; }
 #user-profile { font-size: 13px; color: #aaa; }
 
