@@ -5,52 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail iPhone 15 Pro - CTF Official</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
     <style>
-        .detail-container {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .detail-image {
-            width: 100%;
-            border-radius: 15px;
-            border: 2px solid #d4af37;
-            margin-bottom: 20px;
-        }
-        .price-section {
+        .detail-container { padding: 20px; max-width: 600px; margin: 0 auto; }
+        .back-link { display: inline-block; margin-bottom: 15px; color: #d4af37; text-decoration: none; font-size: 14px; }
+        .detail-image { width: 100%; border-radius: 12px; border: 1px solid #d4af37; }
+        
+        .purchase-box {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            justify-content: space-between;
+            align-items: center;
+            background: #181818;
+            padding: 12px 20px;
+            border-radius: 10px;
             margin: 20px 0;
-            padding: 15px;
-            background: #181818;
-            border-radius: 10px;
-            border-left: 4px solid #d4af37;
+            border: 1px solid #2a2a2a;
         }
-        .spec-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: #181818;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .spec-table td {
-            padding: 15px;
-            border-bottom: 1px solid #2a2a2a;
-        }
-        .spec-label {
-            color: #d4af37;
+        .price-tag { font-size: 20px; color: #fff; font-weight: bold; }
+        
+        .btn-buy-now {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
             font-weight: bold;
-            width: 40%;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
         }
+        .btn-buy-now:hover { background: #fff; transform: scale(1.05); }
+
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; }
+        .spec-table td { padding: 12px; border-bottom: 1px solid #2a2a2a; }
+        .spec-label { color: #d4af37; width: 40%; }
     </style>
 </head>
 <body>
@@ -65,56 +53,27 @@
     <div class="detail-container">
         <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=1200&q=80" alt="iPhone 15 Pro" class="detail-image">
         
-        <h2 style="color: #d4af37; margin-bottom: 5px;">iPhone 15 Pro Max - Titanium</h2>
+        <h2 style="color: #d4af37; margin: 15px 0 5px 0; font-size: 22px;">iPhone 15 Pro Max</h2>
         
-        <div class="price-section">
-            <span style="font-size: 28px; color: #fff; font-weight: bold;">0.0002 π</span>
-            <button class="gold-button" style="width: 100%; padding: 15px; font-size: 16px;" onclick="location.href='index.html#gadget'">
-                BELI SEKARANG
+        <div class="purchase-box">
+            <div class="price-tag">0.0002 π</div>
+            <button class="btn-buy-now" onclick="buyProduct('iPhone-15-Pro', 0.0002)">
+                Beli Sekarang
             </button>
         </div>
-        
-        <p style="color: #ccc; line-height: 1.6;">
-            iPhone 15 Pro Max hadir dengan desain titanium kelas dirgantara yang kuat dan ringan. Dilengkapi dengan chip A17 Pro yang revolusioner dan sistem kamera paling andal di kelasnya.
+
+        <p style="color: #ccc; font-size: 14px; line-height: 1.5;">
+            Titanium grade dirgantara. Chip A17 Pro revolusioner. Sistem kamera paling andal.
         </p>
 
-        <h3 style="color: #d4af37; border-bottom: 1px solid #d4af37; padding-bottom: 10px; margin-top: 30px;">Spesifikasi Lengkap</h3>
+        <h3 style="color: #d4af37; border-bottom: 1px solid #d4af37; padding-bottom: 5px; font-size: 16px;">Spesifikasi</h3>
         <table class="spec-table">
-            <tr>
-                <td class="spec-label">Chipset</td>
-                <td>A17 Pro chip (3nm)</td>
-            </tr>
-            <tr>
-                <td class="spec-label">Layar</td>
-                <td>6.7" Super Retina XDR OLED</td>
-            </tr>
-            <tr>
-                <td class="spec-label">Penyimpanan</td>
-                <td>512GB / 1TB</td>
-            </tr>
-            <tr>
-                <td class="spec-label">Kamera Utama</td>
-                <td>48MP High-res (ProRAW)</td>
-            </tr>
-            <tr>
-                <td class="spec-label">Material</td>
-                <td>Grade 5 Titanium</td>
-            </tr>
-            <tr>
-                <td class="spec-label">Warna</td>
-                <td>Natural Titanium / Blue Titanium</td>
-            </tr>
+            <tr><td class="spec-label">Chipset</td><td>A17 Pro (3nm)</td></tr>
+            <tr><td class="spec-label">Material</td><td>Titanium</td></tr>
+            <tr><td class="spec-label">Internal</td><td>512GB</td></tr>
         </table>
-
-        <div style="margin-top: 40px; text-align: center; border-top: 1px solid #2a2a2a; padding-top: 20px;">
-            <p style="font-size: 12px; color: #888;">Butuh bantuan? Hubungi Admin CTF OFFICIAL</p>
-            <button class="detail-button" style="width: 100%;" onclick="location.href='index.html'">
-                Kembali ke Beranda
-            </button>
-        </div>
-
-        <div style="height: 50px;"></div>
     </div>
 
+    <script src="app.js"></script>
 </body>
 </html>
