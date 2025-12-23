@@ -3,7 +3,7 @@ const Pi = window.Pi;
 async function initPi() {
     try {
         await Pi.init({ version: "2.0" });
-        console.log("Pi SDK berhasil diinisialisasi dalam mode produksi");
+        console.log("Pi SDK berhasil diinisialisasi");
     } catch (e) {
         console.error("Gagal inisialisasi Pi SDK:", e);
     }
@@ -79,7 +79,28 @@ window.onload = async function() {
     setTimeout(() => { login(); }, 1000);
 };
 
+// --- FITUR NAVIGASI ---
 function toggleMenu() {
     const nav = document.getElementById('navMenu');
-    nav.classList.toggle('active');
+    if (nav) nav.classList.toggle('active');
 }
+
+// --- FITUR KEAMANAN & WHATSAPP (Ubay Corner) ---
+
+// 1. Mematikan Klik Kanan
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert("Apa yang kamu cari? Silahkan bertanya pada Ubay Corner (WhatsApp: 082177740963)");
+});
+
+// 2. Mematikan Shortcut Keyboard (Ctrl+U, F12, dsb)
+document.onkeydown = function(e) {
+    // Ctrl+U (View Source), Ctrl+Shift+I (Inspect), F12 (Dev Tools)
+    if (
+        (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 73 || e.keyCode === 83)) || 
+        e.keyCode === 123
+    ) {
+        alert("Apa yang kamu cari? Silahkan bertanya pada Ubay Corner (WhatsApp: 082177740963)");
+        return false;
+    }
+};

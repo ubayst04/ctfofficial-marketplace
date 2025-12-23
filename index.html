@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header>
+<header>
     <div class="header-container">
         <h1 class="logo">CTF <span>OFFICIAL</span></h1>
         
@@ -43,22 +43,24 @@
     </div>
 </header>
 
-    <section class="hero">
-        <h2>Exclusive Marketplace</h2>
-        <p>Gunakan Pi Testnet Anda untuk mendapatkan aset mewah dan produk UMKM terbaik.</p>
-    </section>
+<section class="hero">
+    <h2>Exclusive Marketplace</h2>
+    <p>Gunakan Pi Testnet Anda untuk mendapatkan aset mewah dan produk UMKM terbaik.</p>
+</section>
 
-    <main class="container">
+<main class="container">
     <div class="product-grid">
         
         <div class="product-card" id="luxury-car">
             <div class="badge">Luxury Car</div>
             <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80" alt="Supercar">
             <div class="product-info">
-                <h3>Supercar Porsche 911</h3>
-                <p class="detail">Unit Luxury, Kecepatan Tinggi, Interior Kulit Premium.</p>
+                <h3>Porsche 911</h3>
                 <p class="price">0.0003 π</p>
-                <button class="buy-button" onclick="buyProduct('Porsche-911', 0.0003)">Belanja Sekarang</button>
+                <div class="button-group">
+                    <a href="detail-porsche.html" class="detail-button">Lihat Detail</a>
+                    <button class="buy-button" onclick="buyProduct('Porsche-911', 0.0003)">Beli</button>
+                </div>
             </div>
         </div>
 
@@ -66,10 +68,12 @@
             <div class="badge">Property</div>
             <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" alt="Villa">
             <div class="product-info">
-                <h3>Villa Modern Jakarta</h3>
-                <p class="detail">LT 500m2, Smart Home System, Kolam Renang.</p>
+                <h3>Villa Jakarta</h3>
                 <p class="price">0.0005 π</p>
-                <button class="buy-button" onclick="buyProduct('Villa-Modern', 0.0005)">Belanja Sekarang</button>
+                <div class="button-group">
+                    <a href="detail-villa.html" class="detail-button">Lihat Detail</a>
+                    <button class="buy-button" onclick="buyProduct('Villa-Modern', 0.0005)">Beli</button>
+                </div>
             </div>
         </div>
 
@@ -77,10 +81,12 @@
             <div class="badge">Gadget</div>
             <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=500&q=80" alt="iPhone 15">
             <div class="product-info">
-                <h3>iPhone 15 Pro Max</h3>
-                <p class="detail">Internal 512GB, Titanium Blue, Kamera 48MP.</p>
+                <h3>iPhone 15 Pro</h3>
                 <p class="price">0.0002 π</p>
-                <button class="buy-button" onclick="buyProduct('iPhone-15-Pro', 0.0002)">Belanja Sekarang</button>
+                <div class="button-group">
+                    <a href="detail-iphone.html" class="detail-button">Lihat Detail</a>
+                    <button class="buy-button" onclick="buyProduct('iPhone-15-Pro', 0.0002)">Beli</button>
+                </div>
             </div>
         </div>
 
@@ -88,10 +94,12 @@
             <div class="badge">Motorcycle</div>
             <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&w=800&q=80" alt="Harley">
             <div class="product-info">
-                <h3>Harley Davidson Fat Boy</h3>
-                <p class="detail">Mesin V-Twin, Warna Chrome, Kondisi Baru.</p>
+                <h3>Harley Fat Boy</h3>
                 <p class="price">0.0003 π</p>
-                <button class="buy-button" onclick="buyProduct('Harley-Fatboy', 0.0003)">Belanja Sekarang</button>
+                <div class="button-group">
+                    <a href="detail-harley.html" class="detail-button">Lihat Detail</a>
+                    <button class="buy-button" onclick="buyProduct('Harley-Fatboy', 0.0003)">Beli</button>
+                </div>
             </div>
         </div>
 
@@ -99,34 +107,41 @@
             <div class="badge">UMKM</div>
             <img src="https://ctfofficial.com/wp-content/uploads/2025/11/beras10.jpg" alt="Beras">
             <div class="product-info">
-                <h3>Beras CTF Premium</h3>
-                <p class="detail">Beras Pulen 10KG, Kualitas Organik, Tanpa Pengawet.</p>
+                <h3>Beras Premium</h3>
                 <p class="price">0.00001 π</p>
-                <button class="buy-button" onclick="buyProduct('Beras-CTF', 0.00001)">Belanja Sekarang</button>
+                <div class="button-group">
+                    <a href="detail-beras.html" class="detail-button">Lihat Detail</a>
+                    <button class="buy-button" onclick="buyProduct('Beras-CTF', 0.00001)">Beli</button>
+                </div>
             </div>
         </div>
 
     </div>
 </main>
 
-    <div id="status-log" style="text-align: center; color: #888; margin-bottom: 20px;"></div>
+<a href="https://wa.me/6282177740963?text=Halo%20Ubay%20Corner,%20saya%20ingin%20bertanya%20tentang%20produk%20di%20CTF%20Official" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+</a>
 
-    <footer>
-        <p>&copy; 2025 CTF Official. All Rights Reserved.Ubay Corner</p>
-    </footer>
+<div id="status-log" style="text-align: center; color: #888; margin-bottom: 20px;"></div>
 
-    <script src="app.js"></script>
+<footer>
+    <p>&copy; 2025 CTF Official. All Rights Reserved. Ubay Corner</p>
+</footer>
 
-    <script>
-        setTimeout(() => {
-            const profile = document.getElementById('user-profile');
-            if (profile && profile.innerText.includes("Menghubungkan")) {
-                const btn = document.getElementById('btn-login');
-                if (btn) btn.style.display = "inline-block";
-                profile.innerText = "Koneksi lambat, coba login manual:";
-                profile.style.color = "#ff4d4d";
-            }
-        }, 5000);
-    </script>
+<script src="app.js"></script>
+
+<script>
+    setTimeout(() => {
+        const profile = document.getElementById('user-profile');
+        if (profile && profile.innerText.includes("Menghubungkan")) {
+            const btn = document.getElementById('btn-login');
+            if (btn) btn.style.display = "inline-block";
+            profile.innerText = "Koneksi lambat, coba login manual:";
+            profile.style.color = "#ff4d4d";
+        }
+    }, 5000);
+</script>
+
 </body>
 </html>
