@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Beras Premium - CTF Official</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+    <style>
+        .detail-container { padding: 20px; max-width: 600px; margin: 0 auto; }
+        .back-link { display: inline-block; margin-bottom: 15px; color: #d4af37; text-decoration: none; font-size: 14px; font-weight: bold; }
+        .detail-image { width: 100%; border-radius: 12px; border: 1px solid #d4af37; }
+        
+        .purchase-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #181818;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #2a2a2a;
+        }
+        .price-tag { font-size: 20px; color: #fff; font-weight: bold; }
+        
+        .btn-buy-now {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-buy-now:hover { background: #fff; transform: scale(1.05); }
+
+        .description { color: #ccc; font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+        
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; }
+        .spec-table td { padding: 12px; border-bottom: 1px solid #2a2a2a; }
+        .spec-label { color: #d4af37; width: 40%; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="logo">CTF <span>OFFICIAL</span></h1>
+            <a href="index.html" class="back-link">← Kembali</a>
+        </div>
+    </header>
+
+    <div class="detail-container">
+        <img src="https://ctfofficial.com/wp-content/uploads/2025/11/beras10.jpg" alt="Beras Premium" class="detail-image">
+        
+        <h2 style="color: #d4af37; margin: 15px 0 5px 0; font-size: 22px;">Beras CTF Premium 10KG</h2>
+        
+        <div class="purchase-box">
+            <div class="price-tag">0.00001 π</div>
+            <button class="btn-buy-now" onclick="buyProduct('Beras-CTF-10KG', 0.00001)">
+                Beli Sekarang
+            </button>
+        </div>
+
+        <p class="description">
+            Beras kualitas premium hasil petani lokal binaan CTF Official. Memiliki tekstur pulen, aroma alami, dan diproses tanpa pemutih maupun pengawet. Pilihan sehat untuk keluarga Anda.
+        </p>
+
+        <h3 style="color: #d4af37; border-bottom: 1px solid #d4af37; padding-bottom: 5px; font-size: 16px;">Detail Produk</h3>
+        <table class="spec-table">
+            <tr><td class="spec-label">Berat Bersih</td><td>10 Kilogram</td></tr>
+            <tr><td class="spec-label">Jenis</td><td>Pandan Wangi / Setra Ramos</td></tr>
+            <tr><td class="spec-label">Kualitas</td><td>Grade A (Premium)</td></tr>
+            <tr><td class="spec-label">Asal</td><td>Petani Lokal Indonesia</td></tr>
+            <tr><td class="spec-label">Masa Simpan</td><td>6 - 12 Bulan</td></tr>
+        </table>
+
+        <div style="height: 50px;"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
