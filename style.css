@@ -1,9 +1,6 @@
+/* --- Global & Scroll --- */
 html {
     scroll-behavior: smooth;
-}
-
-.product-card {
-    scroll-margin-top: 100px; 
 }
 
 body {
@@ -13,6 +10,7 @@ body {
     margin: 0;
 }
 
+/* --- Header & Navigasi --- */
 header {
     background: linear-gradient(145deg, #1c1c1c, #000);
     padding: 15px 5%;
@@ -49,9 +47,9 @@ header {
 
 .nav-menu a:hover { color: #d4af37; }
 
+/* Dropdown */
 .dropdown { position: relative; }
 .dropbtn { cursor: pointer; }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -63,7 +61,6 @@ header {
     top: 100%;
     border-radius: 4px;
 }
-
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
@@ -71,11 +68,9 @@ header {
     font-size: 14px;
     border-bottom: 1px solid #2a2a2a;
 }
-
-.dropdown-content a:last-child { border-bottom: none; }
-.dropdown-content a:hover { background-color: #d4af37; color: #000; }
 .dropdown:hover .dropdown-content { display: block; }
 
+/* --- Auth & Buttons --- */
 .auth-box { display: flex; align-items: center; gap: 15px; }
 #user-profile { font-size: 13px; color: #aaa; }
 
@@ -86,10 +81,118 @@ header {
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
     color: #000;
 }
 
+/* --- Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 15px 10% 30px 10%;
+    background: radial-gradient(circle, #222, #0b0b0b);
+}
+.hero h2 { color: #d4af37; font-size: 32px; margin: 0 0 10px 0; }
+.hero p { font-size: 16px; margin: 0; line-height: 1.4; }
+
+/* --- Product Grid (2 Kolom Mobile) --- */
+.container { padding: 20px 5%; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default 2 kolom */
+    gap: 15px;
+}
+
+.product-card {
+    background: #181818;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 100px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 140px; /* Ukuran gambar disesuaikan untuk 2 kolom */
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #d4af37;
+    color: #000;
+    padding: 3px 8px;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.product-info { padding: 12px; text-align: center; flex-grow: 1; }
+.product-info h3 { color: #d4af37; margin: 0; font-size: 14px; }
+.product-info .price { font-size: 16px; margin: 8px 0; font-weight: bold; color: #fff; }
+
+/* --- Button Group (Detail & Beli) --- */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 12px 12px 12px;
+}
+
+.detail-button {
+    text-align: center;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 8px;
+    background: #d4af37;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.buy-button:hover { background: #fff; }
+.detail-button:hover { background: rgba(212, 175, 55, 0.1); }
+
+/* --- WhatsApp Floating --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50px;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 9999;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float img { width: 30px; height: 30px; }
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* --- Hamburger (Mobile) --- */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -97,95 +200,9 @@ header {
     gap: 5px;
     z-index: 1200;
 }
+.hamburger span { width: 25px; height: 3px; background-color: #d4af37; border-radius: 2px; }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: #d4af37;
-    transition: 0.3s;
-    border-radius: 2px;
-}
-
-.hero {
-    text-align: center;
-    padding: 15px 10% 30px 10%;
-    background: radial-gradient(circle, #222, #0b0b0b);
-}
-
-.hero h2 { 
-    color: #d4af37; 
-    font-size: 32px; 
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
-    line-height: 1.4;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.product-card {
-    background: #181818;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid #2a2a2a;
-    transition: 0.3s;
-    position: relative;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-    border-color: #d4af37;
-}
-
-.product-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #d4af37;
-    color: #000;
-    padding: 4px 10px;
-    font-weight: bold;
-    font-size: 11px;
-    border-radius: 4px;
-}
-
-.product-info { padding: 20px; }
-.product-info h3 { color: #d4af37; margin: 0; }
-.product-info .price { font-size: 22px; margin: 15px 0; font-weight: bold; }
-
-.buy-button {
-    width: 100%;
-    padding: 12px;
-    background: transparent;
-    border: 2px solid #d4af37;
-    color: #d4af37;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.buy-button:hover {
-    background: #d4af37;
-    color: #000;
-}
-
-#status-log { text-align: center; color: #888; font-size: 12px; margin: 20px; }
-
+/* --- Responsive Layout --- */
 @media (max-width: 992px) {
     .nav-menu {
         display: none;
@@ -196,28 +213,17 @@ header {
         width: 250px;
         height: 100vh;
         border-left: 1px solid #d4af37;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
     }
-
     .nav-menu.active { display: block; }
-
-    .nav-menu ul {
-        flex-direction: column;
-        padding: 30px;
-        gap: 20px;
-    }
-
+    .nav-menu ul { flex-direction: column; padding: 30px; gap: 20px; }
     .hamburger { display: flex; }
-    
-    .dropdown-content {
-        position: static;
-        background: #000;
-        border: none;
-        box-shadow: none;
-        padding-left: 15px;
-    }
 }
 
-@media (max-width: 600px) {
-    .hero h2 { font-size: 24px; }
+@media (min-width: 768px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .product-card img { height: 180px; }
+}
+
+@media (min-width: 1024px) {
+    .product-grid { grid-template-columns: repeat(4, 1fr); }
 }
