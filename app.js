@@ -100,7 +100,7 @@ document.onkeydown = function(e) {
         (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 73 || e.keyCode === 83)) || 
         e.keyCode === 123
     ) {
-        alert("Apa yang kamu cari? Silahkan bertanya pada Ubay Corner (WhatsApp: 082177740963)");
+        alert("Apa yang kamu cari? Silahkan bertanya pada Admin CTF OFFICIAL (WhatsApp: 0882003515840)");
         return false;
     }
 };
