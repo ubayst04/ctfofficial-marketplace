@@ -11,37 +11,104 @@ header {
     border-bottom: 2px solid #d4af37;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000; /* Ditingkatkan agar di atas elemen lain */
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.logo { color: #d4af37; font-size: 26px; }
+.logo { color: #d4af37; font-size: 26px; margin: 0; }
 .logo span { color: #fff; }
+
+/* --- Navigasi Desktop --- */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover { color: #d4af37; }
+
+/* --- Submenu (Dropdown) --- */
+.dropdown { position: relative; }
+.dropbtn { cursor: pointer; }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+    z-index: 1100;
+    border: 1px solid #d4af37;
+    top: 100%;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.dropdown-content a:last-child { border-bottom: none; }
+.dropdown-content a:hover { background-color: #d4af37; color: #000; }
+.dropdown:hover .dropdown-content { display: block; }
+
+/* --- Auth Box & Buttons --- */
+.auth-box { display: flex; align-items: center; gap: 15px; }
+#user-profile { font-size: 13px; color: #aaa; }
 
 .gold-button {
     background: linear-gradient(to bottom, #d4af37, #aa8507);
     border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
+    padding: 8px 15px;
+    border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    color: #000;
 }
 
+/* --- Hamburger Menu (Mobile) --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1200;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #d4af37;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* --- Sisanya adalah Style Product & Hero Anda --- */
 .hero {
     text-align: center;
     padding: 50px 10%;
     background: radial-gradient(circle, #222, #0b0b0b);
 }
-
 .hero h2 { color: #d4af37; font-size: 32px; }
-
 .container { padding: 20px 5%; }
 
 .product-grid {
@@ -104,8 +171,39 @@ header {
 
 #status-log { text-align: center; color: #888; font-size: 12px; margin: 20px; }
 
-/* Responsive untuk Mobile */
+/* --- Responsive Mobile --- */
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none; /* Sembunyikan default */
+        position: fixed;
+        top: 70px;
+        right: 0;
+        background: #161616;
+        width: 250px;
+        height: 100vh;
+        border-left: 1px solid #d4af37;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    .nav-menu.active { display: block; }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .hamburger { display: flex; }
+    
+    .dropdown-content {
+        position: static;
+        background: #000;
+        border: none;
+        box-shadow: none;
+        padding-left: 15px;
+    }
+}
+
 @media (max-width: 600px) {
-    .header-container { flex-direction: column; text-align: center; }
     .hero h2 { font-size: 24px; }
 }

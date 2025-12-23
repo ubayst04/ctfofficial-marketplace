@@ -10,16 +10,37 @@
 <body>
 
     <header>
-        <div class="header-container">
-            <h1 class="logo">CTF <span>OFFICIAL</span></h1>
-            <div class="auth-box">
-                <div id="user-profile">Menghubungkan ke Pi Network...</div>
-                <button id="btn-login" onclick="login()" style="display:none;" class="gold-button">
-                    Klik untuk Login Manual
-                </button>
-            </div>
+    <div class="header-container">
+        <h1 class="logo">CTF <span>OFFICIAL</span></h1>
+        
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="https://ctfofficial.com">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Kategori ▾</a>
+                    <div class="dropdown-content">
+                        <a href="#">Property</a>
+                        <a href="#">Luxury Cars</a>
+                        <a href="#">Gadget</a>
+                        <a href="#">UMKM</a>
+                    </div>
+                </li>
+                <li><a href="#">Tentang Kami</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-box">
+            <div id="user-profile">Menghubungkan...</div>
+            <button id="btn-login" onclick="login()" style="display:none;" class="gold-button">Login Manual</button>
         </div>
-    </header>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
 
     <section class="hero">
         <h2>Exclusive Marketplace</h2>
@@ -96,7 +117,6 @@
     <script src="app.js"></script>
 
     <script>
-        // Cek apakah user-profile masih macet setelah 5 detik
         setTimeout(() => {
             const profile = document.getElementById('user-profile');
             if (profile && profile.innerText.includes("Menghubungkan")) {

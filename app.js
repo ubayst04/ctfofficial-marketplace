@@ -2,7 +2,6 @@ const Pi = window.Pi;
 
 async function initPi() {
     try {
-        // MENGHAPUS sandbox:true agar sinkron dengan lingkungan Vercel
         await Pi.init({ version: "2.0" });
         console.log("Pi SDK berhasil diinisialisasi dalam mode produksi");
     } catch (e) {
@@ -79,3 +78,8 @@ window.onload = async function() {
     await initPi();
     setTimeout(() => { login(); }, 1000);
 };
+
+function toggleMenu() {
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('active');
+}

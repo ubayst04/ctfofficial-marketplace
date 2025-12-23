@@ -1,12 +1,9 @@
-// api/approve.js
 export default async function handler(req, res) {
-  // Hanya izinkan metode POST
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
   try {
-    // Ambil paymentId dari body
     const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
     const { paymentId } = body;
     
@@ -18,8 +15,6 @@ export default async function handler(req, res) {
     }
 
     console.log(`Mencoba menyetujui pembayaran: ${paymentId}`);
-
-    // Panggil API Pi Network untuk Approve
     const response = await fetch(`https://api.minepi.com/v2/payments/${paymentId}/approve`, {
       method: 'POST',
       headers: {

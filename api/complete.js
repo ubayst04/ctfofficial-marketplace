@@ -1,4 +1,3 @@
-// api/complete.js
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
@@ -17,14 +16,13 @@ export default async function handler(req, res) {
 
     console.log(`Menyelesaikan pembayaran: ${paymentId} dengan TXID: ${txid}`);
 
-    // Panggil API Pi Network untuk Complete
     const response = await fetch(`https://api.minepi.com/v2/payments/${paymentId}/complete`, {
       method: 'POST',
       headers: {
         'Authorization': `Key ${PI_API_KEY}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ txid }) // Mengirimkan Transaction ID ke Pi
+      body: JSON.stringify({ txid })
     });
 
     const data = await response.json();
